@@ -49,6 +49,17 @@ p {
 
 /* Elements
 --------------------------------------------- */
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 section {
 	margin-bottom: 3rem;
 }
@@ -248,3 +259,29 @@ nav a {
 /*--------------------------------------------------------------
 # Dark Mode
 --------------------------------------------------------------*/
+@media (prefers-color-scheme: dark)	{
+	body {
+		color: white;
+		background-color: black;
+	}
+
+	header,
+	footer {
+		background-color: grey;
+		color: black;
+	}
+
+	.services article {
+		background-color: green;
+	}
+
+	a,
+	a:visited {
+		color: #edf1ed;
+	}
+
+	a:hover,
+	a:focus {
+		color: orange;
+	}
+}
